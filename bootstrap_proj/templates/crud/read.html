@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block main %}
+
+{% if items %}
+    <ul>
+    {% for item in items %}
+        <li><a href="/{{ base_url }}/{{ item.id }}/">{{ item }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No {{ base_url }} are available.</p>
+{% endif %}
+
+{% endblock main %}
